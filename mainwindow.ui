@@ -24,10 +24,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelWynik">
     <property name="geometry">
      <rect>
       <x>620</x>
@@ -37,10 +37,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>Kliknięcia: 0</string>
+     <string>Wynik: 0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelNajlepszyWynik">
     <property name="geometry">
      <rect>
       <x>620</x>
@@ -73,7 +73,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_Pomoc">

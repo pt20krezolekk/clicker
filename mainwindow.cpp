@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    wynik = 0;
+    rekord = 0;
 }
 
 MainWindow::~MainWindow()
@@ -37,5 +39,16 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_actionO_Qt_triggered()
 {
     QMessageBox::aboutQt(this);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+
+    wynik++;
+    if (wynik > rekord)
+        rekord = wynik;
+
+    ui->labelWynik->setText("Wynik: " + QString::number(wynik));
+    ui->labelNajlepszyWynik->setText("Najlepszy wynik: " + QString::number(rekord));
 }
 
