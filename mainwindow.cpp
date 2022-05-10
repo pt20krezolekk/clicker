@@ -22,12 +22,6 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_action_Zamknij_triggered()
-{
-
-}
-
-
 void MainWindow::on_actionZamknij_triggered()
 {
     close();
@@ -68,5 +62,4 @@ void MainWindow::readSettings(){
     settings.beginGroup("Wyniki");
     rekord = settings.value("najlepszywynik", 0).toInt();
     settings.endGroup();
-
 }
