@@ -20,6 +20,10 @@ private slots:
 
     void on_actionZamknij_triggered();
 
+    void on_pushButton_2_clicked();
+
+    void on_actionO_Qt_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
