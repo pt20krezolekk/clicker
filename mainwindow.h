@@ -15,6 +15,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
 private slots:
     void on_action_Zamknij_triggered();
 
@@ -30,5 +31,8 @@ private:
     Ui::MainWindow *ui;
     int wynik;
     int rekord;
+
+    void readSettings();
+    void writeSettings();
 };
 #endif // MAINWINDOW_H

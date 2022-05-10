@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <QSettings>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -10,10 +11,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     wynik = 0;
     rekord = 0;
+    readSettings();
+    ui->labelNajlepszyWynik->setText("Najlepszy wynik: " + QString::number(rekord));
 }
 
 MainWindow::~MainWindow()
 {
+    writeSettings();
     delete ui;
 }
 
@@ -52,3 +56,17 @@ void MainWindow::on_pushButton_clicked()
     ui->labelNajlepszyWynik->setText("Najlepszy wynik: " + QString::number(rekord));
 }
 
+void MainWindow::writeSettings(){
+    QSettings settings("ZSI", "clicker");
+    settings.beginGroup("Wyniki");
+    settings.setValue("najlepszywynik", rekord);
+    settings.endGroup();
+}
+
+void MainWindow::readSettings(){
+    QSettings settings("ZSI", "clicker");
+    settings.beginGroup("Wyniki");
+    rekord = settings.value("najlepszywynik", 0).toInt();
+    settings.endGroup();
+
+}
