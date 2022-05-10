@@ -13,3 +13,15 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_action_Zamknij_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionZamknij_triggered()
+{
+    close();
+}
+
