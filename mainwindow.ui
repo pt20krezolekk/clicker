@@ -65,7 +65,7 @@
    </property>
    <widget class="QMenu" name="menu_Pomoc">
     <property name="title">
-     <string>&amp;Pomoc</string>
+     <string>&amp;Opcje</string>
     </property>
     <addaction name="actionZamknij"/>
    </widget>
@@ -74,7 +74,7 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionZamknij">
    <property name="text">
-    <string>Zamknij</string>
+    <string>&amp;Zamknij</string>
    </property>
   </action>
  </widget>
